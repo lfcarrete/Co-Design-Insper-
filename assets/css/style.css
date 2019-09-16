@@ -366,18 +366,18 @@
 	}
 	.bio,.bio_title{
 		position: relative;
-		top:30rem;
+		top:35rem;
 	}
 	.categoria, .categoria_title{
 		position: relative;
-		top:-30rem;
+		top:-35rem;
 		margin-top: 2rem;
 		margin-bottom: -1rem;
 
 	}
 	.info,.info_title{
 		position: relative;
-		top:70rem;
+		top:86rem;
 	}
 
 /*--------------------------------------------------*/
