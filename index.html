@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Home</title>
+		<title>Connection</title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
 		<link href="assets/css/reset.css" rel="stylesheet">
 		<link href="assets/css/style.css" rel="stylesheet">
 		<meta name='viewport' content="width=device-width,initial-scale=1">
+		<script src="assets/js/codes.js"></script>
+  		<script src="assets/js/index.js"></script>
 
 		<meta charset="utf-8">
 	</head>
@@ -15,7 +17,7 @@
 	
 		<header class="header">
 			<div class="header_left">
-				<img class="logo" src="https://picsum.photos/150/50/?random" alt="logo">
+				<img class="logo" src="assets/img/logo.png" alt="logo">
 				<h1 class="busca">Buscar</h1>
 			</div>
 			
@@ -25,13 +27,13 @@
 			</div>
 			
 		</header>
-		
 
+	<div class="loader"></div>
 		<main class="body">
 
 			<section>
 				<div class="body_left">
-					<img class="foto_perfil" src="https://picsum.photos/200/200/?random" alt="Foto de perfil">
+					<img class="foto_perfil" src="assets/img/perfil.png" alt="Foto de perfil">
 
 					<h2 class="info_title">Informações de Contato</h2>
 					<ul>
@@ -66,20 +68,21 @@
 			</section>
 			
 			<section>
-				<div class="body_right"> 
+				<div id="content" class="body_right"> 
 					<h2 class="categoria_title">Áreas & Projetos</h2>
 					<nav>
 						<ul>
-							<li class="categoria"><a href="categoria.html">Matematica</a></li>
-							<li class="categoria"><a href="categoria.html">Física</a></li> 
-							<li class="categoria"><a href="categoria.html">Empreendedorismo</a></li> 
-							<li class="categoria"><a href="categoria.html">Programação</a></li> 
-							<li class="categoria"><a href="categoria.html">Fablab</a></li> 
+							<div  class="categoria">
+								<ul>
+									{{#each portifolio}}
+									<li class="cat_index"><a href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+									{{/each}}
+								</ul>
+							</div>
 						</ul>
 					</nav>
 				</div>
 			</section>
-
 		</main>
 	</body>
 </html>

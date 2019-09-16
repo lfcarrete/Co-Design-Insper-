@@ -4,15 +4,18 @@
 		<title>Home</title>
 		<link href="assets/css/reset.css" rel="stylesheet">
 		<link href="assets/css/style.css" rel="stylesheet">
-		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<script src="assets/js/codes.js"></script>
+  		<script src="assets/js/projetos.js"></script>
+
+  		<meta charset="utf-8">
 	</head>
 	
 	<body class="parent">
 	
 		<header class="header">
 			<div class="header_left">
-				<img class="logo" src="https://picsum.photos/150/50/?random" alt="logo">
+				<img class="logo" src="assets/img/logo.png" alt="logo">
 				<h1 class="busca">Buscar</h1>
 			</div>
 			
@@ -22,33 +25,31 @@
 			</div>
 			
 		</header>
+
+		<div class="loader"></div>
 		
 		
 		<main class="body">
 		
 
-			
-			<div class="foto">
-				<img class="imagem" src="assets/img/wetsuit_test.png" alt="Foto do experimento do projeto">	
-			</div>
+			<section>
+				<div class="foto">
+					<img class="imagem" src="assets/img/{{this.imagem}}" alt="Foto do experimento do projeto">	
+				</div>
+			</section>
 				
 			<section>
 				<div class="conjunto">
-				
-						<p class="projeto"> Modelagem de Sistema Térmico: Wetsuit</p>
+					<div class="projeto">
+						<p> {{this.titulo}}</p>
+					</div>
 			
 					<div class="texto_principal">
 				
 						<h2 class="descricao">Descrição:</h2>
 
 
-						<p class="texto_descricao"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+						<p class="texto_descricao"> {{this.descricao}}</p>
 					</div>
 				</div>
 			</section>
@@ -64,7 +65,7 @@
 
 					<h3 class="ferramentas">Ferramentas e materiais:</h3>
 
-					<p class="texto_ferramentas">Jupyter, Python, Biblioteca odeint</p>
+					<p class="texto_ferramentas">{{this.ferramentas}}</p>
 
 				</section>
 
@@ -73,15 +74,14 @@
 					<h3 class="equipe">Equipe:</h3>
 
 					<ul>
-						<li class="texto_equipe">Luís Filipe Loureiro</li>
-						<li class="texto_equipe">Luís Filipe Carrete</li>
+						<li class="texto_equipe">{{this.equipe}}</li>
 					</ul>
 				</section>
 				
 				<section>
 					<h3 class="professor">Professor:</h3>
 
-					<p class="texto_professor">Paulina Achurra</p>
+					<p class="texto_professor">{{this.professor}}</p>
 				</section>
 			</div>
 
