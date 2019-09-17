@@ -21,5 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
     coDesReplace('.texto_descricao', context)
     coDesReplace('.foto', context)
   })
+  setTimeout(function(){ 
+      let loading = document.querySelector(".preloader");
+      let corpo = document.querySelector(".body");
+      let head = document.querySelector(".header")
+      loading.style.display = "none";
+      corpo.style.display = "flex";
+      head.style.display = "flex";
+      
+    }, 3000);
 })
 

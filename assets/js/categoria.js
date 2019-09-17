@@ -14,4 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
     coDesReplace('.descri', context)
     coDesReplace('.texto_descricao', context)
   })
+  setTimeout(function(){ 
+      let loading = document.querySelector(".preloader");
+      let corpo = document.querySelector(".bord");
+      let head = document.querySelector(".header")
+      loading.style.display = "none";
+      corpo.style.display = "block";
+      head.style.display = "flex";
+      
+    }, 3000);
 })
